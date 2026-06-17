@@ -10,7 +10,7 @@ permissions:
   id-token: write
 
 jobs:
-
+# Etapa de CI (Integração contínua)
   validacao-html:
     runs-on: ubuntu-latest
     steps:
@@ -28,7 +28,7 @@ jobs:
     - name: Validar Arquivos html
       run: htmlhint "index.html"
   
-  #
+  # Etapa de CD (Entrega contínua)
   deploy-producao:
     needs: validacao-html
     runs-on: ubuntu-latest
